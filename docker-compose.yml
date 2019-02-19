@@ -136,7 +136,7 @@ services:
     environment:      
       - name=abc
     volumes:
-      - /ambar/abc:/usr/data
+      - ./ambarback/volume/abc:/usr/data
 
 
   
