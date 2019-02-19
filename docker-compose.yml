@@ -2,7 +2,7 @@ version: "2.1"
 networks:
   internal_network:
 services:      
-  db:
+  ambar-mongodb:
     restart: always
     networks:
       - internal_network
