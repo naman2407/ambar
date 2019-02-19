@@ -62,7 +62,7 @@ services:
         condition: service_healthy
       es:
         condition: service_healthy
-      db:
+      ambar-mongodb:
         condition: service_healthy
     restart: always
     networks:
