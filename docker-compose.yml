@@ -2,7 +2,7 @@ version: "2.1"
 networks:
   internal_network:
 services:      
-  ambar-mongodb:
+  db:
     restart: always
     networks:
       - internal_network
@@ -62,7 +62,7 @@ services:
         condition: service_healthy
       es:
         condition: service_healthy
-      ambar-mongodb:
+      db:
         condition: service_healthy
     restart: always
     networks:
