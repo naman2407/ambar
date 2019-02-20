@@ -8,7 +8,7 @@ services:
       - internal_network
     image: ambar/ambar-mongodb:latest
     environment:
-      - cacheSizeGB=1
+      - cacheSizeGB='2 GB'
     volumes:
       - ./volume/db:/data/db
     expose:
