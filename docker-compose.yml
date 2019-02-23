@@ -10,7 +10,7 @@ services:
     environment:
       - cacheSizeGB=2
     volumes:
-      - /volume/db:/data/db
+      - ./volume/db:/data/db
     expose:
       - "27017"   
   es:
@@ -33,7 +33,7 @@ services:
     cap_add:
       - IPC_LOCK
     volumes:
-      - /volume/es:/usr/share/elasticsearch/data
+      - ./volume/es:/usr/share/elasticsearch/data
   rabbit:
     restart: always
     networks:
@@ -44,7 +44,7 @@ services:
       - "15672"
       - "5672"   
     volumes:
-      - /volume/rabbit:/var/lib/rabbitmq
+      - ./volume/rabbit:/var/lib/rabbitmq
   redis:
     restart: always
     sysctls:
@@ -110,7 +110,7 @@ services:
     expose:
       - "80"
     environment:
-      - api=http://35.194.82.242:8080  
+      - api=http://34.73.189.116:8080  
   pipeline0:
     depends_on: 
       serviceapi: 
@@ -136,7 +136,7 @@ services:
     environment:      
       - name=abc
     volumes:
-      - /volume/abc:/usr/data
+      - ./zxc:/usr/data
 
 
   
