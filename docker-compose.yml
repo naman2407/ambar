@@ -110,7 +110,7 @@ services:
     expose:
       - "80"
     environment:
-      - api=http://34.73.189.116:8080  
+      - api=http://35.185.16.175:8080  
   pipeline0:
     depends_on: 
       serviceapi: 
@@ -123,7 +123,7 @@ services:
       - id=0
       - api_url=http://serviceapi:8081
       - rabbit_host=amqp://rabbit
-  abc:
+  qwerty:
     depends_on: 
       serviceapi: 
         condition: service_healthy 
@@ -134,9 +134,9 @@ services:
     expose:
       - "8082"
     environment:      
-      - name=abc
+      - name=qwerty
     volumes:
-      - ./zxc:/usr/data
+      - ./local:/usr/data
 
 
   
